@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contatti</title>
+    <link rel="stylesheet" href="contatti.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="sticky-header">
+        <div>
+            <img src="../immagini/pngwing.com.png" alt="logo-name" width="80px">
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span>&#9776;</span>
+            </div>
+            <ul id="nav-list">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="date.html">DATE</a></li>
+                <li><a href="biografia.html">BIO</a></li>
+                <li><a href="disco.html">DISCO</a></li>
+                <li><a href="#"><span>CONTATTI</span></a></li>
+                <li><a href="feedback.html">FEEDBACK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contatti">
+        <div class="container">
+            <img class="contact" src="immagini/9.png" alt="">
+            <h1>Contattaci</h1>
+            
+            <form id="contactForm" action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="messaggio">Messaggio:</label>
+                <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+                <button type="submit">Invia</button>
+            </form>
+            <div class="altriModi">
+                <p>Altri modi per contattarci:</p>
+                <a href="tel:+39373832928392"><i class="fas fa-phone fa-sm"></i> 02-2225-8100</a>
+                <br>
+                <a href="mailto:publishing@jype.com"><i class="fasfa-envelope"></i> publishing@jype.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left">
+                <p> 
+                    <p><i class="fas fa-map-marked-alt"></i><a href="https://g.co/kgs/MGqRW8r"> 205, Gangdong daero, Gangdong-gu, Seoul.</a></p>
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    <a href="https://straykids.jype.com/"><i class="fas fa-globe"></i> https://straykids.jype.com/</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--questo codice JavaScript mi permette di gestire l'invio di un modulo di contatto, quindi seleziona l'elemento id contactForm, ovvero il modulo di contatto, aggiungo submit che si attiva quando l'utente invia il modulo e con preventDefault, ho la possibilità di non far ricaricare la pagina all'utente dopo l'invio del modulo. Infine c'è il reset dei dati e il messaggio di conferma-->
+
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); //impedisce il ricaricamento della pagina
+            
+            // Svuota i campi del modulo
+            form.reset();  // Questo metodo resetta tutti i campi del modulo
+    
+            alert('Il modulo è stato inviato con successo!');
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
+    
+</body>
+</html>

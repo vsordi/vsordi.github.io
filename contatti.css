@@ -1,0 +1,182 @@
+
+html, body {
+    min-width: 320px; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Ruda",sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.contact {
+    width: 100%;   
+    height: auto;  
+    display: block; 
+    max-width: 100%; 
+}
+
+header{
+    display: flex; /*per controllare in modo flessibile gli items del contenitore*/
+    justify-content: space-between; /*distribuire lo spazio tra gli items*/
+    color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.sticky-header{
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(12, 12, 12, 0.1);
+}
+
+span{
+    color: rgb(194, 37, 37);
+}
+
+nav ul {
+    list-style: none; 
+    margin: 4; 
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li{
+    margin-left: 20px; 
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+a:hover{
+    color: rgb(194, 37, 37);
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding-left: 60%;
+}
+
+.contatti {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fbfbfb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(194, 37, 37);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(194, 37, 37);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: rgb(194, 37, 37);
+}
+
+.altriModi{
+    justify-items: center;
+}
+
+.altriModi p{
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px; 
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container .left,
+.footer-container .right {
+    flex: 1; 
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none; 
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;  
+    }
+
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #nav-list.show {
+        display: flex;
+    }
+}
